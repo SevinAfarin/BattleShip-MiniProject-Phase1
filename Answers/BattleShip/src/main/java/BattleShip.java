@@ -188,8 +188,14 @@ public class BattleShip {
       @param grid The grid to check for destroyed ships.
       @return true if all ships are sunk, false otherwise.
      */
-    static boolean allShipsSunk(char[][] grid) {
-        //todo
+    static boolean allShipsSunk(char[][] grid){
+        for (int i = 0; i < GRID_SIZE; i++) {
+            for(int j = 0 ; j < GRID_SIZE ; j++){
+            if (grid[i][j] == ship) {
+                return false;
+            }
+        }
+    }
         return true;
     }
 
