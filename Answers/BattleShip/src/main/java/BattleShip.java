@@ -206,8 +206,10 @@ public class BattleShip {
       @return true if the input is in the correct format, false otherwise.
      */
     static boolean isValidInput(String input) {
-        //todo
-        return true;
+        if(input.length() != 2) return  false;
+        char row = input.charAt(0);
+        char column = input.charAt(1);
+        return (row >= 'A' && row<'A'+GRID_SIZE) &&(column >= '1' && column <='0' + GRID_SIZE);
     }
 
     /**
