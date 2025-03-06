@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -23,7 +24,11 @@ public class BattleShip {
 
     // Scanner object for user input
     static Scanner scanner = new Scanner(System.in);
+    static Random rand = new Random();
 
+    static char ship = 'S';
+    static char attack = 'X';
+    static char miss = 'M';
     /**
       The main method that runs the game loop.
       It initializes the grids for both players, places ships randomly, and manages turns.
